@@ -13,6 +13,7 @@ import {
   Sparkles,
   GraduationCap,
   MessageCircle,
+  Lightbulb,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -64,7 +65,7 @@ export default function HomePage() {
         <section className="space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-amber-100/80 text-amber-900 dark:bg-amber-950/60 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800/50">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>שיעורים פרטיים לתלמידי בית ספר</span>
+            <span>שיעורים פרטיים לתלמידי בית ספר | מתמטיקה, מדעים ותכנות (פייתון ו-SQL)</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-stone-900 dark:text-zinc-50 leading-tight">
@@ -72,8 +73,11 @@ export default function HomePage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-stone-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
-            למידה רגועה, ברורה ובלי לחץ – כדי להבין באמת, לקבל ביטחון ולהתחבר
-            לסקרנות הטבעית.
+            המטרה שלי היא לא לפתור לילד את שיעורי הבית – אלא ללמד אותו{" "}
+            <strong className="font-semibold text-stone-900 dark:text-zinc-100">
+              לחשוב בעצמו
+            </strong>
+            , להבין את ההיגיון מאחורי החומר, ולהפסיק לענות על שאלות בצורה עיוורת.
           </p>
 
           <div className="pt-2 flex flex-wrap gap-3">
@@ -105,6 +109,64 @@ export default function HomePage() {
 
         <hr className="border-stone-200 dark:border-zinc-800/80" />
 
+        {/* My Approach Section - Put upfront for parents */}
+        <section className="space-y-4">
+          <h2 className="text-xl sm:text-2xl font-semibold text-stone-900 dark:text-zinc-100 flex items-center gap-2.5">
+            <Lightbulb className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
+            <span>הגישה שלי: לחשוב לבד, לא לדקלם פתרונות</span>
+          </h2>
+
+          <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900/70 border border-stone-200/80 dark:border-zinc-800/80 space-y-4 text-base sm:text-lg text-stone-700 dark:text-zinc-300 leading-relaxed">
+            <p>
+              הרבה ילדים לומדים לעבוד &quot;על אוטומט&quot; – להציב בנוסחה בלי
+              להבין למה, או לנחש איזו תשובה המורה רוצה לשמוע. ברגע שמשנים מילה
+              אחת בשאלה במבחן, הם נתקעים.
+            </p>
+            <p>
+              בשיעורים שלנו אנחנו עובדים אחרת: עם{" "}
+              <strong className="font-semibold text-stone-900 dark:text-zinc-100">
+                המון סבלנות, הכלה ויכולת גישור
+              </strong>
+              , אנחנו עוצרים להבין את השאלה, מפרקים בעיות מורכבות לצעדים פשוטים,
+              ומפתחים סקרנות טבעית וביטחון לחשוב עצמאית.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <div className="p-3.5 rounded-xl bg-stone-50 dark:bg-zinc-950/60 border border-stone-200/60 dark:border-zinc-800/60">
+                <div className="font-semibold text-stone-900 dark:text-zinc-100 text-sm mb-1 flex items-center gap-1.5">
+                  <Compass className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                  <span>הבנה במקום שינון</span>
+                </div>
+                <p className="text-sm text-stone-600 dark:text-zinc-400">
+                  שואלים &quot;למה?&quot; ומבינים את ההיגיון, במקום להציב בנוסחה
+                  בצורה עיוורת.
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-stone-50 dark:bg-zinc-950/60 border border-stone-200/60 dark:border-zinc-800/60">
+                <div className="font-semibold text-stone-900 dark:text-zinc-100 text-sm mb-1 flex items-center gap-1.5">
+                  <HeartHandshake className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                  <span>סבלנות וביטחון עצמי</span>
+                </div>
+                <p className="text-sm text-stone-600 dark:text-zinc-400">
+                  סביבה רגועה שבה מותר לטעות, לשאול ולהתקדם בקצב של הילד.
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-stone-50 dark:bg-zinc-950/60 border border-stone-200/60 dark:border-zinc-800/60">
+                <div className="font-semibold text-stone-900 dark:text-zinc-100 text-sm mb-1 flex items-center gap-1.5">
+                  <Code2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                  <span>כלים לפתרון בעיות</span>
+                </div>
+                <p className="text-sm text-stone-600 dark:text-zinc-400">
+                  איך לגשת לשאלה חדשה לבד – במתמטיקה, במדעים או בתכנות (פייתון
+                  ו-SQL).
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* About Me Section */}
         <section className="space-y-4">
           <h2 className="text-xl sm:text-2xl font-semibold text-stone-900 dark:text-zinc-100 flex items-center gap-2.5">
@@ -117,80 +179,24 @@ export default function HomePage() {
               מתגורר בגבעתיים, בוגר{" "}
               <strong className="font-semibold text-stone-900 dark:text-zinc-100">
                 הנדסת תעשייה וניהול מאוניברסיטת בן גוריון
-              </strong>
-              . איש דאטה לשעבר (מונטרה, שופרסל) שבחר לעבור לחינוך מתוך תשוקה
-              אמיתית לתחום.
+              </strong>{" "}
+              ואיש דאטה בהייטק.
             </p>
             <p>
-              כיום אני גנן, מוביל צהרון ומורה פרטי לתכנות (
+              מתוך אהבה אמיתית לעולם החינוך, לקחתי פסק זמן מההייטק כדי לעבוד עם
+              ילדים בשטח – כגנן וכמוביל צהרון, לצד ניסיון עשיר בהדרכת ילדים
+              במוזיאון לונדע, בפרויקט פר&quot;ח וביוזמות מדע ורובוטיקה.
+            </p>
+            <p>
+              כיום חזרתי להייטק, ובמקביל אני מלמד שיעורים פרטיים לתלמידי בית ספר
+              (כולל תכנות ב-
               <strong className="font-semibold text-stone-900 dark:text-zinc-100">
                 פייתון ו-SQL
               </strong>
-              ). אני מגיע עם רקע עשיר בהדרכת ילדים, כולל{" "}
-              <strong className="font-semibold text-stone-900 dark:text-zinc-100">
-                מוזיאון לונדע
-              </strong>
-              ,{" "}
-              <strong className="font-semibold text-stone-900 dark:text-zinc-100">
-                פרויקט פר&quot;ח
-              </strong>{" "}
-              ויוזמות מדע ורובוטיקה.
+              ). השילוב בין שני העולמות מאפשר לי להביא לשיעור גם חשיבה אנליטית
+              ומסודרת – וגם את הרגישות, הסבלנות והיכולת לדבר עם כל ילד בדיוק
+              בגובה העיניים.
             </p>
-            <p>
-              במקביל, אני מפתח את אפליקציית{" "}
-              <strong className="font-semibold text-stone-900 dark:text-zinc-100">
-                &apos;חינוך לסקרנות&apos;
-              </strong>{" "}
-              ומרצה על חלל ותודעה.
-            </p>
-          </div>
-        </section>
-
-        {/* My Approach Section */}
-        <section className="space-y-4">
-          <h2 className="text-xl sm:text-2xl font-semibold text-stone-900 dark:text-zinc-100 flex items-center gap-2.5">
-            <HeartHandshake className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
-            <span>הגישה שלי</span>
-          </h2>
-
-          <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900/70 border border-stone-200/80 dark:border-zinc-800/80 space-y-4 text-base sm:text-lg text-stone-700 dark:text-zinc-300 leading-relaxed">
-            <p>
-              המון סבלנות, הכלה ויכולת גישור. המטרה היא לא רק לעזור בשיעורי בית,
-              אלא לעורר סקרנות טבעית, לפתח כישורי פתרון בעיות, ולחבר את הילדים
-              לעולם המדע והלמידה בצורה אותנטית.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <div className="p-3.5 rounded-xl bg-stone-50 dark:bg-zinc-950/60 border border-stone-200/60 dark:border-zinc-800/60">
-                <div className="font-semibold text-stone-900 dark:text-zinc-100 text-sm mb-1 flex items-center gap-1.5">
-                  <HeartHandshake className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  <span>סבלנות והכלה</span>
-                </div>
-                <p className="text-sm text-stone-600 dark:text-zinc-400">
-                  קצב מותאם אישית לכל תלמיד ותלמידה, בלי שיפוטיות.
-                </p>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-stone-50 dark:bg-zinc-950/60 border border-stone-200/60 dark:border-zinc-800/60">
-                <div className="font-semibold text-stone-900 dark:text-zinc-100 text-sm mb-1 flex items-center gap-1.5">
-                  <Compass className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  <span>חשיבה ופתרון בעיות</span>
-                </div>
-                <p className="text-sm text-stone-600 dark:text-zinc-400">
-                  לא רק &quot;לסיים מטלות&quot;, אלא להבין לעומק ולשאול שאלות.
-                </p>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-stone-50 dark:bg-zinc-950/60 border border-stone-200/60 dark:border-zinc-800/60">
-                <div className="font-semibold text-stone-900 dark:text-zinc-100 text-sm mb-1 flex items-center gap-1.5">
-                  <Code2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  <span>חיבור לעולם האמיתי</span>
-                </div>
-                <p className="text-sm text-stone-600 dark:text-zinc-400">
-                  מתכנות בפייתון ו-SQL ועד מדע, לוגיקה וסקרנות יומיומית.
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -206,7 +212,7 @@ export default function HomePage() {
                 מוזמנים לדבר איתי ולהתייעץ בשמחה
               </p>
               <p className="text-sm text-stone-600 dark:text-zinc-400">
-                זמין בטלפון, בוואטסאפ או במייל לכל שאלה.
+                שיחת היכרות קצרה בטלפון או בוואטסאפ כדי להבין מה הילד צריך.
               </p>
             </div>
 
