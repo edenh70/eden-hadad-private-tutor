@@ -13,7 +13,7 @@ import {
   Calculator,
   Atom,
   Binary,
-  Home,
+  Languages,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -43,7 +43,7 @@ export default function HomePage() {
       <header className="w-full max-w-2xl mx-auto px-6 pt-8 pb-4 flex items-center justify-between">
         <div className="flex items-center gap-2 text-sm font-medium text-stone-600 dark:text-zinc-400">
           <MapPin className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-          <span>הגעה לבית התלמיד בגבעתיים ורמת גן | אונליין</span>
+          <span>בביתי בגבעתיים | אונליין (אפשרות להגעה לבית התלמיד)</span>
         </div>
 
         <button
@@ -73,7 +73,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-base sm:text-lg text-stone-600 dark:text-zinc-400 leading-relaxed">
-            מורה פרטי לחשבון, מתמטיקה, פיזיקה ומדעים. המטרה היא להבין באמת את החומר, להחזיר את הביטחון, וללמד את הילד לחשוב בעצמו במקום לשנן תשובות על אוטומט.
+            מורה פרטי לחשבון ומתמטיקה, פיזיקה, אנגלית ומדעים. המטרה היא להבין באמת את החומר, להחזיר את הביטחון, וללמד את הילד לחשוב בעצמו במקום לשנן תשובות על אוטומט.
           </p>
 
           {/* Quick highlights */}
@@ -85,14 +85,18 @@ export default function HomePage() {
               <Atom className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" /> פיזיקה ומדעים
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-stone-100 dark:bg-zinc-800/70 border border-stone-200/80 dark:border-zinc-700/60">
-              <Home className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" /> הגעה לבית התלמיד
+              <Languages className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" /> אנגלית
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-stone-100 dark:bg-zinc-800/70 border border-stone-200/80 dark:border-zinc-700/60 text-stone-500 dark:text-zinc-400">
               <Binary className="w-3.5 h-3.5 text-stone-400 dark:text-zinc-500" /> גם יסודות תכנות (Python / SQL)
             </span>
           </div>
 
-          <div className="pt-3 flex flex-wrap gap-3">
+          <div className="text-xs sm:text-sm text-stone-600 dark:text-zinc-400 pt-1">
+            📍 השיעורים מתקיימים <strong>בביתי בגבעתיים או אונליין</strong> (קיימת אפשרות להגעה לבית התלמיד בגבעתיים ורמת גן בתשלום נוסף).
+          </div>
+
+          <div className="pt-2 flex flex-wrap gap-3">
             <a
               href="tel:054-9451235"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium bg-stone-900 text-stone-50 hover:bg-stone-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white transition-colors text-sm"
@@ -206,7 +210,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="w-full max-w-2xl mx-auto px-6 py-6 text-xs text-stone-500 dark:text-zinc-500 flex items-center justify-between border-t border-stone-200/60 dark:border-zinc-900">
         <span>© {new Date().getFullYear()} עדן חדד</span>
-        <span>גבעתיים, רמת גן ואונליין</span>
+        <span>בביתי בגבעתיים | אונליין</span>
       </footer>
     </div>
   );
