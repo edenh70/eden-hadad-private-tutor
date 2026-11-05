@@ -33,7 +33,7 @@ const WHATSAPP_HREF = `https://wa.me/972549451235?text=${encodeURIComponent(
 )}`;
 
 // To show your photo: save it as /public/eden.jpg. Until then, a monogram is shown.
-const PHOTO_SRC = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/eden.jpg`;
+const PHOTO_SRC = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/eden.jpg?v=2`;
 
 const card =
   "rounded-xl bg-white dark:bg-zinc-900/70 border border-stone-200/80 dark:border-zinc-800/80";
