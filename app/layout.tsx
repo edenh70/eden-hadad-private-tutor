@@ -9,9 +9,26 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: "עדן חדד - שיעורים פרטיים בגובה העיניים",
+  title: "שיעורים פרטיים בגבעתיים ואונליין | מתמטיקה, פיזיקה ואנגלית - עדן חדד",
   description:
-    "שיעורים פרטיים לתלמידי יסודי, חטיבה ותיכון. בביתי בגבעתיים או אונליין (אפשרות להגעה לבית התלמיד בתשלום נוסף). מתמטיקה, פיזיקה, אנגלית ומדעים.",
+    "שיעורים פרטיים במתמטיקה, פיזיקה, מדעים ואנגלית בגבעתיים, רמת גן ואונליין. 120–150 ₪ לשיעור, שיחת היכרות חינם ובלי מחויבות.",
+  openGraph: {
+    title: "שיעורים פרטיים שגורמים לילד להבין, לא רק לשנן - עדן חדד",
+    description:
+      "מתמטיקה, פיזיקה, מדעים ואנגלית. בגבעתיים, רמת גן ואונליין. שיחת היכרות חינם.",
+    locale: "he_IL",
+    type: "website",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "עדן חדד - שיעורים פרטיים",
+  telephone: "+972549451235",
+  areaServed: ["גבעתיים", "רמת גן"],
+  address: { "@type": "PostalAddress", addressLocality: "גבעתיים", addressCountry: "IL" },
+  priceRange: "120-150 ILS",
 };
 
 export default function RootLayout({
@@ -43,6 +60,10 @@ export default function RootLayout({
       <body
         className={`${heebo.className} bg-stone-50 text-stone-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased transition-colors duration-200 selection:bg-amber-200 dark:selection:bg-amber-900`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
